@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Online Library</title>
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <div class="header">
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+    <h1>📚 My Online Library</h1>
+    <input type="text" placeholder="Search books...">
+  </div>
+
+  <div class="container">
+
+    <!-- ===== SIDEBAR ===== -->
+    <div class="sidebar" id="sidebar">
+      <a href="#" class="active" onclick="selectLink(this)">Fiction</a>
+      <a href="#" onclick="selectLink(this)">Non-Fiction</a>
+      <a href="#" onclick="selectLink(this)">Academic</a>
+      <a href="#" onclick="selectLink(this)">New Releases</a>
+      <a href="#" onclick="selectLink(this)">Most Popular</a>
+      <a href="#" onclick="selectLink(this)">My Saved Books</a>
+    </div>
+
+    <!-- ===== MAIN CONTENT (placeholder) ===== -->
+    <div class="main-content">
+      <h2 id="pageTitle">Fiction</h2>
+      <p>This is where the book list would go.</p>
+    </div>
+
+  </div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
