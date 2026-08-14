@@ -1,9 +1,9 @@
-# Week {Number}: {Project Title}
+# Week 12: Commkunity Hub Project
 
 ## Author
-- **Name:** Your Full Name
-- **GitHub:** [@MaisoriKitayama](https://github.com/MaisoriKitayama)
-- **Date:** Month Day, Year
+- **Name:** Kipchirchir Tony 
+- **GitHub:** [@MaisoriKitayama](https://github.com/kipochirchirtony35)
+- **Date:** August 14, 2026
 
 ## Project Description
 Brief description of what you built and why.
