@@ -1,4 +1,4 @@
-# Week 12: Commkunity Hub Project
+# Week 12: Community Hub Project
 
 ## Author
 - **Name:** Kipchirchir Tony 
