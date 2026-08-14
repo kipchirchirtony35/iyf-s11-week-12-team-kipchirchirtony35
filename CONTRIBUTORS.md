@@ -1,0 +1,29 @@
+# Contributors
+
+## Team Members
+
+| Name | GitHub | Role | Contributions |
+|------|--------|------|---------------|
+| Kipchirchir Tony | [kipchirchirtony35](https://github.com/kipchirchirtony35) | Team Lead | Setup, Header component, API integration |
+| Gladwell Muthoni | [gladwellmuthoni ](https://github.com/gladwellmuthoni ) | Developer | Footer, Forms, Styling |
+| Okolla Immaculate | [okolla-immaculate](https://github.com/okolla-immaculate) | Developer | Navigation, Routing |
+| philip Biven | [philipbiven-pixel](https://github.com/philipbiven-pixel) | Developer | Responsiveness |
+
+## Contribution Breakdown
+
+### Kipchirchir Tony
+- Set up project structure
+- Created header component
+- Implemented API calls
+- Code review for all PRs
+
+### Gladwell Muthoni
+- Built footer component
+- Styled all forms
+- Added responsive design
+- Wrote documentation
+
+### Okolla Immaculate
+- Created navigation menu
+- Set up React Router
+- Fixed accessibility issues
