@@ -27,3 +27,7 @@
 - Created navigation menu
 - Set up React Router
 - Fixed accessibility issues
+
+### Philip Biven
+- Create a login page
+- Added responsive design
