@@ -12,6 +12,13 @@ body {
   display: flex;
 }
 
+@media (max-with: 700px) {
+  .main-content {
+    font-size: 18px;
+  }
+
+}
+
 /*  HEADER  */
 .header {
   background-color: #2c5f4a;  
@@ -62,14 +69,16 @@ body {
 }
 
 /* Tablet and up */
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   .header {
     flex-wrap: nowrap;
+    
   }
 
   .header h1 {
     flex: 0 0 auto;
     text-align: left;
+    font-size: 26px;
   }
 
   .header input[type="text"] {
@@ -78,7 +87,7 @@ body {
   }
 
   .menu-btn {
-    display: none; 
+    display: inline-block; 
   }
 
   .link1 {
@@ -87,6 +96,12 @@ body {
     gap: 15px;
     margin: 0;
   }
+
+  .link1 a {
+    font-size: 18px;
+  }
+
+
 }
 
 /*  LAYOUT: sidebar + main content side by side */
@@ -189,4 +204,9 @@ body {
     flex-direction: column;
     gap: 8px;
   }
+
+  .footer p,
+  .footer-links a {
+    font-size: 16px; 
+  }  
 }
