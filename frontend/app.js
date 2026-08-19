@@ -1,30 +1,26 @@
-// ===== Sidebar toggle (mobile) =====
+// Sidebar toggle (mobile) 
 function toggleSidebar() {
   const sidebar = document.getElementById("sidebar");
   sidebar.classList.toggle("show");
 }
 
-// ===== Highlight clicked link, update heading, fetch books =====
+// Highlight clicked link, update heading, fetch books 
 function selectLink(link) {
-  // remove "active" class from all links
+ 
   const links = document.querySelectorAll(".sidebar a");
   links.forEach(l => l.classList.remove("active"));
 
-  // add "active" class to the clicked link
   link.classList.add("active");
-
-  // update the main heading text
+ 
   document.getElementById("pageTitle").innerText = link.innerText;
 
-  // fetch books matching this category
   fetchBooks(link.innerText);
 
-  // close sidebar on mobile after selecting
   const sidebar = document.getElementById("sidebar");
   sidebar.classList.remove("show");
 }
 
-// ===== Fetch books from Google Books API =====
+// Fetch books from Google Books API
 async function fetchBooks(category) {
   const content = document.querySelector(".main-content");
 
@@ -86,7 +82,7 @@ async function fetchBooks(category) {
   }
 }
 
-// ===== Search bar functionality =====
+// Search bar functionality 
 function setupSearch() {
   const searchInput = document.querySelector(".header input[type='text']");
   if (!searchInput) return;
@@ -95,15 +91,14 @@ function setupSearch() {
     if (e.key === "Enter" && searchInput.value.trim() !== "") {
       fetchBooks(searchInput.value.trim());
 
-      // clear active sidebar link since this is a custom search
       const links = document.querySelectorAll(".sidebar a");
       links.forEach(l => l.classList.remove("active"));
     }
   });
 }
 
-// ===== Run on page load =====
+// Run on page load
 window.addEventListener("DOMContentLoaded", () => {
   setupSearch();
-  fetchBooks("Fiction"); // load default category
+  fetchBooks("Fiction");
 });
