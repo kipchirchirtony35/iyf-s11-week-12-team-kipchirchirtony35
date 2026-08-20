@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Post Academic Book</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #f4f7fb;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            background: #1e3a5f;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        header h1 {
+            margin-bottom: 8px;
+            font-size: 30px;
+        }
+
+        header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* MAIN */
+        main {
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        /* FORM CONTAINER */
+        .post-book-container {
+            background: white;
+            max-width: 700px;
+            margin: auto;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .post-book-container h2 {
+            text-align: center;
+            color: #1e3a5f;
+            margin-bottom: 10px;
+        }
+
+        .form-description {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        /* FORM */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            font-size: 15px;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #1e3a5f;
+            box-shadow: 0 0 0 2px rgba(30, 58, 95, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        /* BUTTON */
+        .post-button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 7px;
+            background: #1e3a5f;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .post-button:hover {
+            background: #142940;
+        }
+
+        /* SUCCESS MESSAGE */
+        .success-message {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: #d4edda;
+            color: #155724;
+            border-radius: 7px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            background: #1e3a5f;
+            color: white;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            .post-book-container {
+                padding: 25px 20px;
+            }
+
+            main {
+                padding: 20px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <h1>Kenyan Academic Books</h1>
+
+        <p>
+            Post a Primary or Secondary School Textbook
+        </p>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <div class="container">
+
+            <div class="post-book-container">
+
+                <h2>Post a New Book</h2>
+
+                <p class="form-description">
+                    Enter the details of the academic book
+                    you want to add to the library.
+                </p>
+
+
+                <!-- BOOK FORM -->
+                <form id="bookForm">
+
+                    <!-- TITLE -->
+                    <div class="form-group">
+
+                        <label for="title">
+                            Book Title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="title"
+                            name="title"
+                            placeholder="Enter book title"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- AUTHOR -->
+                    <div class="form-group">
+
+                        <label for="author">
+                            Author
+                        </label>
+
+                        <input
+                            type="text"
+                            id="author"
+                            name="author"
+                            placeholder="Enter author name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- LEVEL -->
+                    <div class="form-group">
+
+                        <label for="level">
+                            Education Level
+                        </label>
+
+                        <select
+                            id="level"
+                            name="level"
+                            required
+                        >
+
+                            <option value="">
+                                Select education level
+                            </option>
+
+                            <option value="Primary">
+                                Primary
+                            </option>
+
+                            <option value="Secondary">
+                                Secondary
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- SUBJECT -->
+                    <div class="form-group">
+
+                        <label for="subject">
+                            Subject
+                        </label>
+
+                        <select
+                            id="subject"
+                            name="subject"
+                            required
+                        >
+
+                            <option value="">
+                                Select subject
+                            </option>
+
+                            <option value="English">
+                                English
+                            </option>
+
+                            <option value="Kiswahili">
+                                Kiswahili
+                            </option>
+
+                            <option value="Mathematics">
+                                Mathematics
+                            </option>
+
+                            <option value="Science">
+                                Science
+                            </option>
+
+                            <option value="Social Studies">
+                                Social Studies
+                            </option>
+
+                            <option value="CRE">
+                                CRE
+                            </option>
+
+                            <option value="IRE">
+                                IRE
+                            </option>
+
+                            <option value="History">
+                                History
+                            </option>
+
+                            <option value="Geography">
+                                Geography
+                            </option>
+
+                            <option value="Biology">
+                                Biology
+                            </option>
+
+                            <option value="Chemistry">
+                                Chemistry
+                            </option>
+
+                            <option value="Physics">
+                                Physics
+                            </option>
+
+                            <option value="Business">
+                                Business
+                            </option>
+
+                            <option value="Agriculture">
+                                Agriculture
+                            </option>
+
+                            <option value="Computer">
+                                Computer Studies
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- CURRICULUM -->
+                    <div class="form-group">
+
+                        <label for="curriculum">
+                            Curriculum
+                        </label>
+
+                        <select
+                            id="curriculum"
+                            name="curriculum"
+                            required
+                        >
+
+                            <option value="">
+                                Select curriculum
+                            </option>
+
+                            <option value="CBC">
+                                CBC
+                            </option>
+
+                            <option value="8-4-4">
+                                8-4-4
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- CLASS -->
+                    <div class="form-group">
+
+                        <label for="classLevel">
+                            Class / Form
+                        </label>
+
+                        <input
+                            type="text"
+                            id="classLevel"
+                            name="classLevel"
+                            placeholder="Example: Grade 6 or Form 3"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- ISBN -->
+                    <div class="form-group">
+
+                        <label for="isbn">
+                            ISBN
+                        </label>
+
+                        <input
+                            type="text"
+                            id="isbn"
+                            name="isbn"
+                            placeholder="Enter ISBN number"
+                        >
+
+                    </div>
+
+
+                    <!-- PUBLISHER -->
+                    <div class="form-group">
+
+                        <label for="publisher">
+                            Publisher
+                        </label>
+
+                        <input
+                            type="text"
+                            id="publisher"
+                            name="publisher"
+                            placeholder="Enter publisher name"
+                        >
+
+                    </div>
+
+
+                    <!-- DESCRIPTION -->
+                    <div class="form-group">
+
+                        <label for="description">
+                            Book Description
+                        </label>
+
+                        <textarea
+                            id="description"
+                            name="description"
+                            rows="5"
+                            placeholder="Enter a short description of the book..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- IMAGE -->
+                    <div class="form-group">
+
+                        <label for="bookImage">
+                            Book Cover Image
+                        </label>
+
+                        <input
+                            type="file"
+                            id="bookImage"
+                            name="bookImage"
+                            accept="image/*"
+                        >
+
+                    </div>
+
+
+                    <!-- SUBMIT -->
+                    <button
+                        type="submit"
+                        class="post-button"
+                    >
+                        Post Book
+                    </button>
+
+                </form>
+
+
+                <!-- SUCCESS MESSAGE -->
+                <div
+                    id="successMessage"
+                    class="success-message"
+                >
+                    Book posted successfully!
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        Kenyan Academic Books • Educational Library
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        const bookForm =
+            document.getElementById("bookForm");
+
+        const successMessage =
+            document.getElementById("successMessage");
+
+
+        bookForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            successMessage.style.display = "block";
+
+            bookForm.reset();
+
+            setTimeout(function() {
+
+                successMessage.style.display = "none";
+
+            }, 3000);
+
+        });
+
+    </script>
+
+</body>
+                          </html>
