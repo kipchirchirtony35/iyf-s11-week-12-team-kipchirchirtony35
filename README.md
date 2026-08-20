@@ -2,7 +2,7 @@
 
 ## Author
 - **Name:** Kipchirchir Tony 
-- **GitHub:** [@MaisoriKitayama](https://github.com/kipochirchirtony35)
+- **GitHub:** [kipchirchirtony35](https://github.com/kipochirchirtony35)
 - **Date:** August 14, 2026
 
 ## Project Description
