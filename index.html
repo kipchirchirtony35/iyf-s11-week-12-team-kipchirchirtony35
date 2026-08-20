@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My Online Library</title>
+
+  <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+
+    <button class="menu-btn" onclick="toggleSidebar()">
+      ☰
+    </button>
+
+    <h1>📚 My Online Library</h1>
+
+    <div class="search-box">
+      <input
+        type="text"
+        placeholder="Search for books..."
+        aria-label="Search for books"
+      >
+    </div>
+
+    <a href="Login.html" class="login-link">
+      Login
+    </a>
+
+  </header>
+
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+
+    <h2>Categories</h2>
+
+    <a href="#" class="active" onclick="selectLink(this); return false;">
+      Fiction
+    </a>
+
+    <a href="#" onclick="selectLink(this); return false;">
+      Science
+    </a>
+
+    <a href="#" onclick="selectLink(this); return false;">
+      Technology
+    </a>
+
+    <a href="#" onclick="selectLink(this); return false;">
+      History
+    </a>
+
+    <a href="#" onclick="selectLink(this); return false;">
+      Biography
+    </a>
+
+    <a href="#" onclick="selectLink(this); return false;">
+      Romance
+    </a>
+
+    <a href="#" onclick="selectLink(this); return false;">
+      Mystery
+    </a>
+
+  </aside>
+
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <h2 id="pageTitle">Fiction</h2>
+
+    <p>Loading books...</p>
+
+  </main>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="App.js"></script>
+
+</body>
+
+</html>
