@@ -1,4 +1,12 @@
 /* ===== LOGIN PAGE ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
 .login-container {
   min-height: 100vh;
