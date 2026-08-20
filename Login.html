@@ -1,18 +1,21 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>My Online Library - Login</title>
 
-  <link rel="stylesheet" href="frontend/styles.css">
+  <!-- Connect CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <div class="login-container">
+  <main class="login-container">
 
-    <div class="login-box">
+    <section class="login-box">
 
       <h1>📚 My Online Library</h1>
 
@@ -23,17 +26,21 @@
       <form id="loginForm">
 
         <label for="email">Email</label>
+
         <input
           type="email"
           id="email"
+          name="email"
           placeholder="Enter your email"
           required
         >
 
         <label for="password">Password</label>
+
         <input
           type="password"
           id="password"
+          name="password"
           placeholder="Enter your password"
           required
         >
@@ -43,17 +50,21 @@
       </form>
 
       <div class="signup">
+
         <p>
           Don't have an account?
           <a href="Signup.html">Sign up</a>
         </p>
+
       </div>
 
-    </div>
+    </section>
 
-  </div>
+  </main>
 
-  <script src="App.js"></script>
+  <!-- Connect JavaScript -->
+  <script src="app.js"></script>
 
 </body>
-</html>
+
+         </html>
