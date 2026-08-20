@@ -93,3 +93,317 @@ body {
 .signup a:hover {
   text-decoration: underline;
                               }
+
+/* ===== LIBRARY PAGE ===== */
+
+body {
+  background: #f4f6f8;
+  color: #222;
+}
+
+
+/* ===== HEADER ===== */
+
+.header {
+  height: 70px;
+  background: #2563eb;
+  color: white;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 25px;
+  gap: 20px;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header h1 {
+  font-size: 22px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.menu-btn {
+  display: none;
+
+  background: none;
+  border: none;
+  color: white;
+
+  font-size: 25px;
+  cursor: pointer;
+}
+
+
+/* ===== SEARCH ===== */
+
+.search-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-box input {
+  width: 100%;
+  max-width: 500px;
+
+  padding: 11px 15px;
+
+  border: none;
+  border-radius: 6px;
+
+  font-size: 15px;
+}
+
+.search-box input:focus {
+  outline: 2px solid white;
+}
+
+
+/* ===== LOGIN LINK ===== */
+
+.login-link {
+  color: white;
+  text-decoration: none;
+
+  font-weight: bold;
+
+  padding: 10px 15px;
+
+  border: 1px solid white;
+  border-radius: 6px;
+}
+
+.login-link:hover {
+  background: white;
+  color: #2563eb;
+}
+
+
+/* ===== SIDEBAR ===== */
+
+.sidebar {
+  position: fixed;
+
+  left: 0;
+  top: 70px;
+
+  width: 230px;
+  height: calc(100vh - 70px);
+
+  background: white;
+
+  padding: 25px 15px;
+
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+
+  z-index: 900;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-size: 20px;
+}
+
+.sidebar a {
+  display: block;
+
+  padding: 12px 15px;
+
+  margin-bottom: 5px;
+
+  color: #333;
+
+  text-decoration: none;
+
+  border-radius: 6px;
+}
+
+.sidebar a:hover {
+  background: #e8efff;
+  color: #2563eb;
+}
+
+.sidebar a.active {
+  background: #2563eb;
+  color: white;
+}
+
+
+/* ===== MAIN CONTENT ===== */
+
+.main-content {
+  margin-left: 230px;
+
+  padding: 30px;
+}
+
+.main-content h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+
+/* ===== BOOK LIST ===== */
+
+.book-list {
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  );
+
+  gap: 20px;
+}
+
+
+/* ===== BOOK CARD ===== */
+
+.book-card {
+  background: white;
+
+  border-radius: 10px;
+
+  padding: 18px;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  gap: 15px;
+
+  transition: transform 0.2s;
+}
+
+.book-card:hover {
+  transform: translateY(-3px);
+}
+
+
+/* ===== BOOK COVER ===== */
+
+.book-cover {
+  width: 80px;
+  height: 120px;
+
+  object-fit: cover;
+
+  border-radius: 4px;
+
+  flex-shrink: 0;
+}
+
+.book-cover.placeholder {
+  background: #e5e7eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 30px;
+}
+
+
+/* ===== BOOK INFORMATION ===== */
+
+.book-info {
+  flex: 1;
+}
+
+.book-info h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+
+  font-size: 17px;
+}
+
+.book-author {
+  color: #2563eb;
+
+  font-weight: bold;
+
+  font-size: 14px;
+}
+
+.book-desc {
+  color: #666;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+
+  .header {
+    padding: 0 15px;
+  }
+
+  .header h1 {
+    font-size: 18px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .search-box {
+    display: none;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+
+    padding: 20px;
+  }
+
+  .book-list {
+    grid-template-columns: 1fr;
+  }
+
+  .login-link {
+    margin-left: auto;
+
+    padding: 8px 10px;
+
+    font-size: 13px;
+  }
+}
+
+
+/* ===== SMALL PHONES ===== */
+
+@media (max-width: 450px) {
+
+  .header h1 {
+    font-size: 16px;
+  }
+
+  .book-card {
+    padding: 12px;
+  }
+
+  .book-cover {
+    width: 65px;
+    height: 100px;
+  }
+
+}
