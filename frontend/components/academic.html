@@ -13,46 +13,49 @@
         <h1>Kenyan Academic Books</h1>
         <p>Search Primary & Secondary School Textbooks (CBC & 8-4-4)</p>
     </header>
+
+
+    <main>
+        <div class="container"> 
+            <div class="search-section">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search by title, author or keyword...">
+                </div>
+
+                <select id="levelFilter">
+                    <option value="all">All Levels</option>
+                    <option value="Primary">Primary</option>
+                    <option value="Secondary">Secondary</option>
+                </select>
       
-    <div class="container">        
-        <div class="search-section">
-            <div class="search-box">
-              <input type="text" id="searchInput" placeholder="Search by title, author or keyword...">
+                <select id="subjectFilter">
+                    <option value="all">All Subjects</option>
+                    <option value="English">English</option>
+                    <option value="Kiswahili">Kiswahili</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="Science">Science</option>
+                    <option value="Social Studies">Social Studies</option>
+                    <option value="CRE">CRE</option>
+                    <option value="IRE">IRE</option>
+                    <option value="History">History</option>
+                    <option value="Geography">Geography</option>
+                    <option value="Biology">Biology</option>
+                    <option value="Chemistry">Chemistry</option>
+                    <option value="Physics">Physics</option>
+                    <option value="Business">Business</option>
+                    <option value="Agriculture">Agriculture</option>
+                    <option value="Computer">Computer Studies</option>
+                </select>
             </div>
       
-            <select id="levelFilter">
-              <option value="all">All Levels</option>
-              <option value="Primary">Primary</option>
-              <option value="Secondary">Secondary</option>
-            </select>
+            <div class="results-info" id="resultsInfo">Showing all books</div>
       
-            <select id="subjectFilter">
-              <option value="all">All Subjects</option>
-              <option value="English">English</option>
-              <option value="Kiswahili">Kiswahili</option>
-              <option value="Mathematics">Mathematics</option>
-              <option value="Science">Science</option>
-              <option value="Social Studies">Social Studies</option>
-              <option value="CRE">CRE</option>
-              <option value="IRE">IRE</option>
-              <option value="History">History</option>
-              <option value="Geography">Geography</option>
-              <option value="Biology">Biology</option>
-              <option value="Chemistry">Chemistry</option>
-              <option value="Physics">Physics</option>
-              <option value="Business">Business</option>
-              <option value="Agriculture">Agriculture</option>
-              <option value="Computer">Computer Studies</option>
-            </select>
-        </div>
-      
-        <div class="results-info" id="resultsInfo">Showing all books</div>
-      
-        <div class="books-grid" id="booksGrid">
+            <div class="books-grid" id="booksGrid">
             <!-- Books will be injected here -->
+            </div>
         </div>
-    </div>
-      
+     
+    </main>
     <footer>
         Sample catalog of popular Kenyan primary & secondary school books • For educational purposes
     </footer>
