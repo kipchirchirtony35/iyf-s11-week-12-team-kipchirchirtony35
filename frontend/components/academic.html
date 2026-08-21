@@ -1,66 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Books</title>
-    <link rel="stylesheet" href="academic.css">
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kenyan Boooks</title>
+  <link rel="stylesheet" href="../components/academic.css">
 </head>
 <body>
-    <header>
-        <h1>Kenyan Academic Books</h1>
-        <p>Search Primary & Secondary School Textbooks (CBC & 8-4-4)</p>
-    </header>
+  <header>
+    <div class="logo">
+      <span class="logo-icon">📚</span>
+      <span>KenyanBooks</span>
+    </div>
+    <nav>
+      <a href="#">Primary</a>
+      <a href="#">Secondary</a>
+      <a href="#">CBC</a>
+      <a href="#">8-4-4</a>
+    </nav>
+  </header>
+  
+  <main>
+    <h1>Kenyan Academic Books Catalog</h1>
+    <p class="subtitle">Browse Primary & Junior School CBC-approved textbook listings</p>
+  
+    <div class="search-section">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search by title, author or subject...">
+        <button id="searchBtn">Search →</button>
+      </div>
+    </div>
+  
+    <div class="filters">
+      <select id="levelFilter">
+        <option value="all">All Levels</option>
+        <option value="Pre-Primary">Pre-Primary</option>
+        <option value="Primary">Primary</option>
+        <option value="Junior School">Junior School</option>
+      </select>
+  
+      <select id="subjectFilter">
+        <option value="all">All Subjects</option>
+        <option value="Environmental Activities">Environmental Activities</option>
+        <option value="Language Activities">Language Activities</option>
+        <option value="English">English</option>
+        <option value="Social Studies">Social Studies</option>
+        <option value="Agriculture">Agriculture</option>
+        <option value="Creative Arts and Sports">Creative Arts and Sports</option>
+        <option value="Integrated Science">Integrated Science</option>
+      </select>
+    </div>
+  
+    <div class="results-info" id="resultsInfo">Showing all books</div>
+  
+    <div class="books-grid" id="booksGrid">
+      <!-- Books appear here -->
+    </div>
+  
+    <section class="free-section">
+      <h2>Free & Open-Access Resources</h2>
+      <p class="subtitle" style="margin-bottom:24px;">These are legitimate, freely licensed sources — no pirated copies of the paid textbooks above.</p>
+      <div class="free-grid">
+        <a class="free-card" href="https://kec.ac.ke/" target="_blank" rel="noopener">
+          <div class="free-icon">🇰🇪</div>
+          <div class="free-title">Kenya Education Cloud (KEC)</div>
+          <div class="free-desc">KICD's official free digital learning hub — CBC-aligned lessons, videos, and interactive content for Pre-Primary through Junior School. Free to access; some mobile networks zero-rate the data.</div>
+        </a>
+        <a class="free-card" href="https://kicd.ac.ke/cbc-materials/" target="_blank" rel="noopener">
+          <div class="free-icon">📑</div>
+          <div class="free-title">KICD Approved Materials List</div>
+          <div class="free-desc">The official, up-to-date list of KICD-approved CBC textbooks and curriculum designs for every grade and subject.</div>
+        </a>
+        <a class="free-card" href="https://www.africanstorybook.org/" target="_blank" rel="noopener">
+          <div class="free-icon">📖</div>
+          <div class="free-title">African Storybook</div>
+          <div class="free-desc">Openly licensed picture storybooks in English, Kiswahili, and many African languages — free to read online or download as PDF.</div>
+        </a>
+        <a class="free-card" href="https://digitallibrary.io/" target="_blank" rel="noopener">
+          <div class="free-icon">🌍</div>
+          <div class="free-title">Global Digital Library</div>
+          <div class="free-desc">Open-licensed early-grade reading books, including Kiswahili and English titles, free to download in multiple formats.</div>
+        </a>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    Sample catalog of KICD-approved Kenyan CBC textbooks • For educational reference only
+  </footer>
+  
 
-
-    <main>
-        <div class="container"> 
-            <div class="search-section">
-                <div class="search-box">
-                    <input type="text" id="searchInput" placeholder="Search by title, author or keyword...">
-                </div>
-
-                <select id="levelFilter">
-                    <option value="all">All Levels</option>
-                    <option value="Primary">Primary</option>
-                    <option value="Secondary">Secondary</option>
-                </select>
-      
-                <select id="subjectFilter">
-                    <option value="all">All Subjects</option>
-                    <option value="English">English</option>
-                    <option value="Kiswahili">Kiswahili</option>
-                    <option value="Mathematics">Mathematics</option>
-                    <option value="Science">Science</option>
-                    <option value="Social Studies">Social Studies</option>
-                    <option value="CRE">CRE</option>
-                    <option value="IRE">IRE</option>
-                    <option value="History">History</option>
-                    <option value="Geography">Geography</option>
-                    <option value="Biology">Biology</option>
-                    <option value="Chemistry">Chemistry</option>
-                    <option value="Physics">Physics</option>
-                    <option value="Business">Business</option>
-                    <option value="Agriculture">Agriculture</option>
-                    <option value="Computer">Computer Studies</option>
-                </select>
-            </div>
-      
-            <div class="results-info" id="resultsInfo">Showing all books</div>
-      
-            <div class="books-grid" id="booksGrid">
-            <!-- Books will be injected here -->
-            </div>
-        </div>
-     
-    </main>
-    <footer>
-        Sample catalog of popular Kenyan primary & secondary school books • For educational purposes
-    </footer>
-      
-    <script src="academic.js"></script>
-    
+  <script src="../components/academic.js"></script>
 </body>
 </html>
+
+
