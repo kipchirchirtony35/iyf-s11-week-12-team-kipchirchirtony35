@@ -1,0 +1,187 @@
+/* =========================
+   ABOUT PAGE
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: #f1f5f9;
+  color: #1e293b;
+  min-height: 100vh;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.about-header {
+  background: #ffffff;
+  text-align: center;
+  padding: 70px 20px 60px;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.about-header h1 {
+  font-size: 2.5rem;
+  color: #0f172a;
+  margin-bottom: 15px;
+}
+
+.about-header p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #64748b;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   BACK LINK
+========================= */
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #1d4ed8;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 24px;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.about-section {
+  background: #ffffff;
+  padding: 35px;
+  margin-bottom: 30px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+}
+
+.about-section h2 {
+  color: #0f172a;
+  font-size: 1.7rem;
+  margin-bottom: 18px;
+}
+
+.about-section p {
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.about-section p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================
+   FEATURE CARDS
+========================= */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.feature-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 25px;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  border-color: #bfdbfe;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.1);
+}
+
+.feature-card h3 {
+  color: #2563eb;
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.about-footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 25px 20px;
+}
+
+.about-footer p {
+  font-size: 0.9rem;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 700px) {
+
+  .about-header {
+    padding: 50px 20px;
+  }
+
+  .about-header h1 {
+    font-size: 2rem;
+  }
+
+  .about-header p {
+    font-size: 1rem;
+  }
+
+  .about-container {
+    padding: 30px 16px;
+  }
+
+  .about-section {
+    padding: 25px 20px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+}
