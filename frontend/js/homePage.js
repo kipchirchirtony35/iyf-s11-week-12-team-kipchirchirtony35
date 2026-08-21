@@ -36,18 +36,11 @@ const searchInput = document.querySelector(".search-box input");
 
 let currentCategory = "Fiction";
 
-// SIDEBAR TOGGLE 
 function toggleSidebar() {
-  // Works for both desktop (collapsed) and mobile (open) states.
-  // See the CSS notes: mobile uses .open, desktop uses .collapsed.
-  if (window.innerWidth <= 768) {
-    sidebar.classList.toggle("open");
-  } else {
-    sidebar.classList.toggle("collapsed");
-    mainContent.classList.toggle("full-width");
-  }
+  const sidebar = document.getElementById("sidebar");
+  sidebar.classList.toggle("open");      // for mobile
+  sidebar.classList.toggle("collapsed"); // for desktop (optional)
 }
-
 //  CATEGORY SELECTION 
 function selectLink(link) {
   // Remove "active" from all sidebar links

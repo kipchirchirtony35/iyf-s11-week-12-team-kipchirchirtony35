@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>My Online Library</title>
+  <title>homePage</title>
 
   <link rel="stylesheet" href="../components/home.css">
 </head>
-
 <body>
-
   <!-- HEADER -->
   <header class="header">
 
-    <button class="menu-btn" onclick="toggleSidebar()">
+    <button class="menu-btn" onclick="toggleSidebar()" aria-label="Toggle menu">
       ☰
     </button>
-  
+
     <div class="search-box">
       <input
         type="text"
@@ -26,24 +22,34 @@
         aria-label="Search for books"
       >
     </div>
-  
-    <!-- NEW LINKS -->
+
+    <!-- Desktop copy of the page links; hidden on mobile (see home.css) -->
     <nav class="nav-links">
       <a href="weather.html">Weather</a>
       <a href="post.html">Post</a>
       <a href="about.html">About</a>
       <a href="academic.html">Academic</a>
     </nav>
-  
+
     <a href="login.html" class="login-link">
       Login
     </a>
-  
+
   </header>
 
+  <!-- Dimmed backdrop for the mobile drawer; tapping it closes the menu -->
+  <div class="nav-backdrop" id="navBackdrop"></div>
 
-  <!-- SIDEBAR -->
+  <!-- SIDEBAR (doubles as the mobile drawer) -->
   <aside class="sidebar" id="sidebar">
+
+    <!-- Mobile-only copy of the page links; only visible under 900px -->
+    <div class="sidebar-mobile-links">
+      <a href="weather.html">Weather</a>
+      <a href="post.html">Post</a>
+      <a href="about.html">About</a>
+      <a href="academic.html">Academic</a>
+    </div>
 
     <h2>Categories</h2>
 
@@ -89,7 +95,7 @@
 
 
   <!-- JAVASCRIPT -->
-  <script src="frontend/js/homePage.js"></script>
+  <script src="../components/home.js"></script>
 
 </body>
 
