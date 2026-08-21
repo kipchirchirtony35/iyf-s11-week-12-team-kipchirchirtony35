@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Navigation from "./components/navigation.jsx";
+import About from "./components/About.jsx";
 
 function Home() {
   return <h1>Home</h1>;
@@ -25,6 +26,7 @@ function App() {
   <main>
     <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/academic" element={<AcademicBooks />} />
         <Route path="/posts" element={<Posts />} />
         <Route path="/weather" element={<Weather />} />
