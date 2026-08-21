@@ -1,0 +1,100 @@
+:root {
+    --header-grey: #6c757d;
+    --box-blue: #3498db;
+    --box-blue-dark: #2980b9;
+    --bg: #f8f9fa;
+  }
+  
+  * { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  
+  body { 
+    background: var(--bg); 
+    padding: 20px;
+  }
+  
+  /* HEADER - GREY */
+  h1 {
+    color: var(--header-grey);
+    font-size: 2rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  h2 {
+    color: var(--header-grey);
+    font-size: 1.5rem;
+    margin: 15px 0;
+  }
+  
+  /* LOGIN / SIGNUP BOX - BLUE */
+  form {
+    background: var(--box-blue);
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 400px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+    color: white;
+  }
+  
+  form label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  
+  form input:focus {
+    outline: 2px solid white;
+  }
+  
+  /* BUTTONS - WHITE ON BLUE */
+  form button {
+    background: white;
+    color: var(--box-blue);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    transition: background 0.3s;
+  }
+  
+  form button:hover {
+    background: #e0e0e0;
+  }
+  
+  /* LINKS */
+  a {
+    color: var(--box-blue);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  p {
+    margin: 15px 0;
+    }
+  
