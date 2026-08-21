@@ -69,7 +69,7 @@ body {
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
 }
 
-/*NEW NAV LINKS (Weather, Post, About, Academic)  */
+/* NAV LINKS (Weather, Post, About, Academic) — desktop copy, lives in header */
 .nav-links {
   display: flex;
   align-items: center;
@@ -120,7 +120,7 @@ body {
 }
 
 /*
-   SIDEBAR */
+   SIDEBAR (also doubles as the mobile drawer) */
 .sidebar {
   position: fixed;
   top: 64px;
@@ -166,9 +166,15 @@ body {
   font-weight: 600;
 }
 
-/* Hidden sidebar (for mobile toggle) */
+/* Hidden sidebar (desktop collapse toggle) */
 .sidebar.hidden {
   transform: translateX(-100%);
+}
+
+/* This block of links only exists for the mobile drawer;
+   on desktop it stays out of the way. */
+.sidebar-mobile-links {
+  display: none;
 }
 
 /* MAIN CONTENT */
@@ -193,7 +199,7 @@ body {
   font-size: 1.05rem;
 }
 
-/* When sidebar is hidden */
+/* When sidebar is hidden (desktop collapse) */
 body.sidebar-collapsed .main-content {
   margin-left: 0;
 }
@@ -202,44 +208,49 @@ body.sidebar-collapsed .sidebar {
   transform: translateX(-100%);
 }
 
+/* Dimmed backdrop shown behind the open mobile drawer */
+.nav-backdrop {
+  display: none;
+}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
+
+  /* The header's own nav-links copy is hidden on mobile —
+     the same links reappear inside the sidebar drawer instead. */
   .nav-links {
-    position: fixed;
-    top: 64px;
-    left: 0;
-    right: 0;
-    background: #ffffff;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    margin: 0;
-    padding: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transform: translateY(-150%);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform 0.25s ease, opacity 0.25s ease;
-    z-index: 950;
-  }
-
-  .nav-links.active {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .nav-links a {
-    padding: 12px 14px;
-    border-radius: 8px;
+    display: none;
   }
 
   .sidebar {
     transform: translateX(-100%);
+    box-shadow: 4px 0 16px rgba(0, 0, 0, 0.12);
   }
 
   .sidebar.active {
     transform: translateX(0);
+  }
+
+  .sidebar-mobile-links {
+    display: block;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .sidebar-mobile-links a {
+    display: block;
+    text-decoration: none;
+    color: #334155;
+    padding: 11px 14px;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+
+  .sidebar-mobile-links a:hover {
+    background: #f1f5f9;
+    color: #2563eb;
   }
 
   .main-content {
@@ -248,5 +259,14 @@ body.sidebar-collapsed .sidebar {
 
   .search-box {
     max-width: 260px;
+  }
+
+  /* Dimmed backdrop behind the open drawer; tapping it closes the menu */
+  .nav-backdrop.active {
+    display: block;
+    position: fixed;
+    inset: 64px 0 0 0;
+    background: rgba(15, 23, 42, 0.35);
+    z-index: 890;
   }
 }
