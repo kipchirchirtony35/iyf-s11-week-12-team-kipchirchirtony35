@@ -1,58 +1,140 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>My Online Library</title>
-<link rel="stylesheet" href="frontend/styles.css">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
+
+  <title>My Online Library</title>
+=======
+>>>>>>> 15f01c5d321fc20e5bd3a1e657ad5d81f2082c1c
+
+  <title>My Online Library</title>
+
+  <link rel="stylesheet" href="frontend/styles.css">
 </head>
+
 <body>
 
-  <!-- ===== HEADER ===== -->
-  <div class="header">
-    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+  <!-- HEADER -->
+  <header class="header">
+
+    <button class="menu-btn" onclick="toggleSidebar()">
+      ☰
+    </button>
+
+<<<<<<< HEAD
+<<<<<<< HEAD
     <h1>📚 My Online Library</h1>
-    <input type="text" placeholder="Search books...">
-    <ul class="link1">
-      <li><a href="frontend/components/weather.html">Weather</a></li>
-      <li><a href="">Academic Books</a></li>
-      <li><a href="">posts</a></li>
-    </ul>
-  </div>
+=======
+      <h1>📚 My Online Library</h1>
 
-  <div class="container">
+      <h2>Login</h2>
 
-    <!-- ===== SIDEBAR ===== -->
-    <div class="sidebar" id="sidebar">
-      <a href="#" class="active" onclick="selectLink(this)">Fiction</a>
-      <a href="#" onclick="selectLink(this)">Non-Fiction</a>
-      <a href="#" onclick="selectLink(this)">Academic</a>
-      <a href="#" onclick="selectLink(this)">New Releases</a>
-      <a href="#" onclick="selectLink(this)">Most Popular</a>
-      <a href="#" onclick="selectLink(this)">My Saved Books</a>
+      <p>Welcome back! Please login to continue.</p>
+
+      <form id="loginForm">
+
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        >
+
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter your password"
+          required
+        >
+
+        <button type="submit">Login</button>
+
+      </form>
+
+      <div class="signup">
+        <p>
+          Don't have an account?
+          <a href="Signup.html">Sign up</a>
+        </p>
+      </div>
+>>>>>>> b1b1f55ebec44ba7a27c86de146dea9c3655bcd1
+=======
+    <h1>📚 My Online Library</h1>
+>>>>>>> 15f01c5d321fc20e5bd3a1e657ad5d81f2082c1c
+
+    <div class="search-box">
+      <input
+        type="text"
+        placeholder="Search for books..."
+        aria-label="Search for books"
+      >
     </div>
 
-    <!-- ===== MAIN CONTENT (placeholder) ===== -->
-    <div class="main-content">
-      <h2 id="pageTitle">Fiction</h2>
-      <p>This is where the book list would go.</p>
-    </div>
+<<<<<<< HEAD
+    <a href="frontend/login.html" class="login-link">
+=======
+    <a href="Login.html" class="login-link">
+>>>>>>> 15f01c5d321fc20e5bd3a1e657ad5d81f2082c1c
+      Login
+    </a>
 
-  </div>
+  </header>
 
-<!-- footer -->
-  <footer class="footer">
-    <p>&copy; 2026 My Online Library. All rights reserved.</p>
-    <ul class="footer-links">
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Privacy Policy</a></li>
-    </ul>
 
-  </footer>
-  
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
 
-<script src="frontend/app.js"></script>
+    <h2>Categories</h2>
+
+    <a href="#" class="active" onclick="selectLink(this); return false;">
+      Fiction
+    </a>
+
+    <a href="#" onclick="selectLink(this); return false;">
+      Science
+    </a>
+
+    <a href="#" onclick="selectLink(this); return false;">
+      Technology
+    </a>
+
+    <a href="#" onclick="selectLink(this); return false;">
+      History
+    </a>
+
+    <a href="#" onclick="selectLink(this); return false;">
+      Biography
+    </a>
+
+    <a href="#" onclick="selectLink(this); return false;">
+      Romance
+    </a>
+
+    <a href="#" onclick="selectLink(this); return false;">
+      Mystery
+    </a>
+
+  </aside>
+
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <h2 id="pageTitle">Fiction</h2>
+
+    <p>Loading books...</p>
+
+  </main>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="App.js"></script>
 
 </body>
+
 </html>

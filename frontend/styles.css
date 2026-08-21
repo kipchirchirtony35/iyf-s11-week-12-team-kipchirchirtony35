@@ -1,212 +1,99 @@
-/* Basic page setup */
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; 
-  margin: 0;
+:root {
+  --header-grey: #6c757d;
+  --box-blue: #3498db;
+  --box-blue-dark: #2980b9;
+  --bg: #f8f9fa;
 }
 
-/* Main container grows to fill space */
-.container {
-  flex: 1; 
-  display: flex;
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-@media (max-with: 700px) {
-  .main-content {
-    font-size: 18px;
-  }
-
-}
-
-/*  HEADER  */
-.header {
-  background-color: #2c5f4a;  
-  color: white;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header h1 {
-  margin: 0;
-  font-size: 22px;
-}
-
-.header input[type="text"] {
-  padding: 8px;
-  border: none;
-  border-radius: 4px;
-  width: 200px;
-}
-
-.menu-btn {
-  background-color: #2c5f4a;
-  color: white;
-  border: 1px solid white;
-  padding: 8px 12px;
-  cursor: pointer;
-  font-size: 18px;
-  display: none; 
-}
-
-.link1 {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-  margin: 0;
-  padding: 0;
-}
-
-.link1 a {
-  color: white;
-  text-decoration: none;
-}
-
-.link1 a:hover {
-  text-decoration: underline;
-}
-
-/* Tablet and up */
-@media (min-width: 700px) {
-  .header {
-    flex-wrap: nowrap;
-    
-  }
-
-  .header h1 {
-    flex: 0 0 auto;
-    text-align: left;
-    font-size: 26px;
-  }
-
-  .header input[type="text"] {
-    width: 200px;
-    margin-top: 0;
-  }
-
-  .menu-btn {
-    display: inline-block; 
-  }
-
-  .link1 {
-    display: flex; 
-    flex-direction: row;
-    gap: 15px;
-    margin: 0;
-  }
-
-  .link1 a {
-    font-size: 18px;
-  }
-
-
-}
-
-/*  LAYOUT: sidebar + main content side by side */
-.container {
-  display: flex;
-}
-
-/*  SIDEBAR */
-.sidebar {
-  background-color: #fffdf8;
-  width: 200px;
-  padding: 20px 0;
-  border-right: 1px solid #ddd;
-}
-
-.sidebar a {
-  display: block;
-  padding: 10px 20px;
-  color: #333;
-  text-decoration: none;
-}
-
-.sidebar a:hover {
-  background-color: #eee;
-}
-
-.sidebar a.active {
-  background-color: #dcefe4;
-  font-weight: bold;
-  border-left: 4px solid #2c5f4a;
-}
-
-/*MAIN CONTENT (just for demo) */
-.main-content {
-  flex: 1;
+body { 
+  background: var(--bg); 
   padding: 20px;
 }
 
-/* Mobile styles */
-@media (max-width: 700px) {
-  .menu-btn {
-    display: inline-block;
-  }
-
-  .header input[type="text"] {
-    display: none;
-  }
-
-  .sidebar {
-    display: none;   
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 180px;
-    z-index: 10;
-  }
-
-  .sidebar.show {
-    display: block;  
-  }
-}
-
-
-
-.footer {
-  background-color: #2c5f4a;
-  color: white;
-  text-align: center;
-  padding: 15px 20px;
-  margin-top: 20px;
-}
-
-.footer p {
-  margin: 0;
-  font-size: 14px;
-}
-
-.footer-links {
-  list-style: none;
+/* HEADER - GREY */
+h1 {
+  color: var(--header-grey);
+  font-size: 2rem;
+  margin-bottom: 10px;
   display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin: 10px 0 0;
-  padding: 0;
+  align-items: center;
+  gap: 10px;
 }
 
-.footer-links a {
+h2 {
+  color: var(--header-grey);
+  font-size: 1.5rem;
+  margin: 15px 0;
+}
+
+/* LOGIN / SIGNUP BOX - BLUE */
+form {
+  background: var(--box-blue);
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
   color: white;
-  text-decoration: none;
-  font-size: 14px;
 }
 
-.footer-links a:hover {
+form label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+form input:focus {
+  outline: 2px solid white;
+}
+
+/* BUTTONS - WHITE ON BLUE */
+form button {
+  background: white;
+  color: var(--box-blue);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 100%;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #e0e0e0;
+}
+
+/* LINKS */
+a {
+  color: var(--box-blue);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
   text-decoration: underline;
 }
 
-/* Responsive footer */
-@media (max-width: 700px) {
-  .footer-links {
-    flex-direction: column;
-    gap: 8px;
+p {
+  margin: 15px 0;
   }
-
-  .footer p,
-  .footer-links a {
-    font-size: 16px; 
-  }  
-}
