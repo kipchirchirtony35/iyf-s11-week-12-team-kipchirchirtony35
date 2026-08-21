@@ -19,10 +19,12 @@ document.getElementById("logoutBtn").addEventListener("click", () => {
 const sidebar = document.getElementById("sidebar");
 const mainContent = document.querySelector(".main-content");
 
+const navLinks = document.querySelector(".nav-links");
+
 function toggleSidebar() {
   if (window.innerWidth <= 900) {
-    // Mobile: slide the sidebar in/out
-    sidebar.classList.toggle("active");
+    // Mobile: hamburger reveals the nav-links dropdown (Weather, Post, About, Academic)
+    navLinks.classList.toggle("active");
   } else {
     // Desktop: collapse sidebar and expand main content
     document.body.classList.toggle("sidebar-collapsed");
