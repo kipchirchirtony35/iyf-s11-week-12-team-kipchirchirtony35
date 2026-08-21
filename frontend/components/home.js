@@ -20,11 +20,12 @@ const sidebar = document.getElementById("sidebar");
 const mainContent = document.querySelector(".main-content");
 
 function toggleSidebar() {
-  if (window.innerWidth <= 768) {
-    sidebar.classList.toggle("open");
+  if (window.innerWidth <= 900) {
+    // Mobile: slide the sidebar in/out
+    sidebar.classList.toggle("active");
   } else {
-    sidebar.classList.toggle("collapsed");
-    mainContent.classList.toggle("full-width");
+    // Desktop: collapse sidebar and expand main content
+    document.body.classList.toggle("sidebar-collapsed");
   }
 }
 
@@ -32,11 +33,9 @@ function selectLink(link) {
   document.querySelectorAll(".sidebar a").forEach((a) => a.classList.remove("active"));
   link.classList.add("active");
 
-  if (window.innerWidth <= 768) {
-    sidebar.classList.remove("open");
+  if (window.innerWidth <= 900) {
+    sidebar.classList.remove("active");
   }
-  // For now this page just shows the dashboard; wire this up to
-  // filter academicGrid or redirect to index.html#category later.
 }
 
 // ===== WEATHER (Open-Meteo — free, no API key required) =====
