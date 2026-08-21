@@ -1,0 +1,254 @@
+/* =====================
+   RESET & BASE
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: #f1f5f9;
+  color: #1e293b;
+  min-height: 100vh;
+  display: flex;
+}
+
+/* =====================
+   HEADER
+===================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 16px;
+  z-index: 1000;
+}
+
+/* Menu Button */
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #1e293b;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.menu-btn:hover {
+  background: #f1f5f9;
+}
+
+/* Search Box */
+.search-box {
+  flex: 1;
+  max-width: 420px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px 18px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.25s;
+  background: #f8fafc;
+}
+
+.search-box input:focus {
+  border-color: #3b82f6;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* ========== NEW NAV LINKS (Weather, Post, About, Academic) ========== */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  margin-right: 12px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #475569;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  background: #f1f5f9;
+  color: #3b82f6;
+}
+
+.nav-links a.active {
+  background: #eff6ff;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* Login Link */
+.login-link {
+  text-decoration: none;
+  background: #2563eb;
+  color: white;
+  padding: 9px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.25s;
+  white-space: nowrap;
+}
+
+.login-link:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* =====================
+   SIDEBAR
+===================== */
+.sidebar {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  width: 240px;
+  height: calc(100vh - 64px);
+  background: #ffffff;
+  border-right: 1px solid #e2e8f0;
+  padding: 24px 16px;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+  z-index: 900;
+}
+
+.sidebar h2 {
+  font-size: 1.1rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+  padding-left: 12px;
+}
+
+.sidebar a {
+  display: block;
+  text-decoration: none;
+  color: #334155;
+  padding: 11px 14px;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.sidebar a:hover {
+  background: #f1f5f9;
+  color: #2563eb;
+}
+
+.sidebar a.active {
+  background: #eff6ff;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* Hidden sidebar (for mobile toggle) */
+.sidebar.hidden {
+  transform: translateX(-100%);
+}
+
+/* =====================
+   MAIN CONTENT
+===================== */
+.main-content {
+  margin-left: 240px;
+  margin-top: 64px;
+  padding: 32px;
+  flex: 1;
+  min-height: calc(100vh - 64px);
+  transition: margin-left 0.3s ease;
+}
+
+.main-content h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+.main-content p {
+  color: #64748b;
+  font-size: 1.05rem;
+}
+
+/* When sidebar is hidden */
+body.sidebar-collapsed .main-content {
+  margin-left: 0;
+}
+
+body.sidebar-collapsed .sidebar {
+  transform: translateX(-100%);
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none; /* Hide on small screens (or make a dropdown later) */
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .search-box {
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 0 12px;
+    gap: 10px;
+  }
+
+  .search-box {
+    max-width: none;
+  }
+
+  .login-link {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+
+  .main-content {
+    padding: 20px 16px;
+  }
+}

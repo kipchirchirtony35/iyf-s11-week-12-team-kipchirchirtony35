@@ -5,13 +5,11 @@ const passwordInput = document.getElementById("password");
 
 // ===== LOGIN HANDLER =====
 loginForm.addEventListener("submit", (e) => {
-  e.preventDefault(); // stop the form from reloading the page
+  e.preventDefault();
 
   const email = emailInput.value.trim();
   const password = passwordInput.value.trim();
 
-  // Basic validation (HTML "required" already covers empty fields,
-  // this is just an extra safety check)
   if (!email || !password) {
     showError("Please fill in both fields.");
     return;
@@ -22,15 +20,10 @@ loginForm.addEventListener("submit", (e) => {
     return;
   }
 
-  // ===== TEMPORARY "LOGIN" LOGIC =====
-  // Right now there's no backend, so we just store the user's email
-  // to simulate a logged-in session, then redirect to the home page.
-  // Later you can replace this block with a real fetch() call to your
-  // login API and only redirect on a successful response.
   localStorage.setItem("loggedInUser", email);
 
-  // Redirect to the home page (the library page with the book grid)
-  window.location.href = "index.html";
+  // Redirect to the home page inside frontend/components/
+  window.location.href = "frontend/components/home.html";
 });
 
 // ===== HELPERS =====
