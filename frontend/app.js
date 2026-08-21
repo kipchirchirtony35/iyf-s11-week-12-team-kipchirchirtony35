@@ -102,3 +102,24 @@ window.addEventListener("DOMContentLoaded", () => {
   setupSearch();
   fetchBooks("Fiction");
 });
+
+// ===== LOGIN =====
+
+const loginForm = document.getElementById("loginForm");
+
+if (loginForm) {
+  loginForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    if (email === "user@example.com" && password === "123456") {
+      alert("Login successful!");
+
+      window.location.href = "index.html";
+    } else {
+      alert("Incorrect email or password.");
+    }
+  });
+        }
