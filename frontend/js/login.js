@@ -23,7 +23,7 @@ loginForm.addEventListener("submit", (e) => {
   localStorage.setItem("loggedInUser", email);
 
   // Redirect to the home page (absolute path from project root)
-  window.location.href = "/frontend/components/home.html";
+  window.location.href = "frontend/components/home.html";
 });
 
 // ===== HELPERS =====
