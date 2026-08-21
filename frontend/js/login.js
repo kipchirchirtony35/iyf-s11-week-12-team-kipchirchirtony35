@@ -22,8 +22,8 @@ loginForm.addEventListener("submit", (e) => {
 
   localStorage.setItem("loggedInUser", email);
 
-  // Redirect to the home page inside frontend/components/
-  window.location.href = "frontend/components/home.html";
+  // Redirect to the home page (absolute path from project root)
+  window.location.href = "/frontend/components/home.html";
 });
 
 // ===== HELPERS =====
@@ -33,7 +33,6 @@ function isValidEmail(email) {
 }
 
 function showError(message) {
-  // Remove any existing error message first
   const existingError = document.querySelector(".error-msg");
   if (existingError) existingError.remove();
 
