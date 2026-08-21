@@ -1,6 +1,5 @@
-/* =====================
-   RESET & BASE
-===================== */
+/* 
+   RESET & BASE */
 * {
   margin: 0;
   padding: 0;
@@ -15,9 +14,7 @@ body {
   display: flex;
 }
 
-/* =====================
-   HEADER
-===================== */
+/*    HEADER */
 .header {
   position: fixed;
   top: 0;
@@ -72,7 +69,7 @@ body {
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
 }
 
-/* ========== NEW NAV LINKS (Weather, Post, About, Academic) ========== */
+/*NEW NAV LINKS (Weather, Post, About, Academic)  */
 .nav-links {
   display: flex;
   align-items: center;
@@ -122,9 +119,8 @@ body {
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
-/* =====================
-   SIDEBAR
-===================== */
+/*
+   SIDEBAR */
 .sidebar {
   position: fixed;
   top: 64px;
@@ -175,9 +171,7 @@ body {
   transform: translateX(-100%);
 }
 
-/* =====================
-   MAIN CONTENT
-===================== */
+/* MAIN CONTENT */
 .main-content {
   margin-left: 240px;
   margin-top: 64px;
@@ -208,12 +202,10 @@ body.sidebar-collapsed .sidebar {
   transform: translateX(-100%);
 }
 
-/* =====================
-   RESPONSIVE
-===================== */
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .nav-links {
-    display: none; /* Hide on small screens (or make a dropdown later) */
+    display: none; 
   }
 
   .sidebar {
