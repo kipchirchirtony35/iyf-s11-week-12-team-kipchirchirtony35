@@ -102,7 +102,6 @@ window.addEventListener("DOMContentLoaded", () => {
   setupSearch();
   fetchBooks("Fiction");
 });
-
 // ===== LOGIN =====
 
 const loginForm = document.getElementById("loginForm");
@@ -111,18 +110,30 @@ if (loginForm) {
   loginForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const email = document.getElementById("email").value;
+    const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value;
 
-    if (email === "user@example.com" && password === "123456") {
-      alert("Login successful!");
+    // Get saved user
+    const savedUser = localStorage.getItem("libraryUser");
+
+    if (!savedUser) {
+      alert("No account found. Please sign up first.");
+      return;
+    }
+
+    const user = JSON.parse(savedUser);
+
+    // Check login details
+    if (email === user.email && password === user.password) {
+      alert("Login successful! Welcome, " + user.name + "!");
 
       window.location.href = "index.html";
     } else {
       alert("Incorrect email or password.");
     }
   });
-        }
+}
+// 
 
 // ===== SIGN UP =====
 
