@@ -210,3 +210,16 @@ body {
     max-width: 200px;
   }
 }
+#logoutBtn {
+  padding: 10px 18px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#logoutBtn:hover {
+  background-color: #b02a37;
+}
+  
