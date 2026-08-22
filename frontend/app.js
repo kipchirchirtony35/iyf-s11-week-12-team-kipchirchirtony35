@@ -168,10 +168,11 @@ if (loginForm) {
     try {
       const user = JSON.parse(savedUser);
 
-      if (email === user.email && password === user.password) {
-        alert("Login successful! Welcome, " + user.name + "!");
-        window.location.href = "index.html";
-      } else {
+     if (email === user.email && password === user.password) {
+  alert("Login successful! Welcome, " + user.name + "!");
+
+  window.location.href = "home.html";
+     }  else {
         alert("Incorrect email or password.");
       }
 
