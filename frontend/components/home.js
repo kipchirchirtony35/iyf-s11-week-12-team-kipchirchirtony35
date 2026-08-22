@@ -83,9 +83,4 @@ window.addEventListener("resize", () => {
 // ===== LOGOUT =====
 const logoutButton = document.getElementById("logoutButton");
 
-if (logoutButton) {
-  logoutButton.addEventListener("click", function () {
-    localStorage.removeItem("loggedIn");
-    window.location.href = "../login.html";
-  });
-        }
+
