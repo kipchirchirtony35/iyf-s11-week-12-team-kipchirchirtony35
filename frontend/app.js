@@ -171,7 +171,7 @@ if (loginForm) {
      if (email === user.email && password === user.password) {
   alert("Login successful! Welcome, " + user.name + "!");
 
-  window.location.href = "home.html";
+  window.location.href = "index.html";
      }  else {
         alert("Incorrect email or password.");
       }
