@@ -132,18 +132,42 @@ if (signupForm) {
   signupForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("signupEmail").value;
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("signupEmail").value.trim();
     const password = document.getElementById("signupPassword").value;
     const confirmPassword = document.getElementById("confirmPassword").value;
 
+    // Check if passwords match
     if (password !== confirmPassword) {
       alert("Passwords do not match.");
       return;
     }
 
+    // Check if this email is already registered
+    const existingUser = localStorage.getItem("libraryUser");
+
+    if (existingUser) {
+      const user = JSON.parse(existingUser);
+
+      if (user.email === email) {
+        alert("An account with this email already exists.");
+        return;
+      }
+    }
+
+    // Create user object
+    const newUser = {
+      name: name,
+      email: email,
+      password: password
+    };
+
+    // Save user in browser
+    localStorage.setItem("libraryUser", JSON.stringify(newUser));
+
     alert("Account created successfully, " + name + "!");
 
-    window.location.href = "Login.html";
+    // Go to login page
+    window.location.href = "login.html";
   });
 }
