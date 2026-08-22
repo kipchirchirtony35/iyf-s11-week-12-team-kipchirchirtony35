@@ -8,7 +8,7 @@
 | Gladwell Muthoni | [gladwellmuthoni ](https://github.com/gladwellmuthoni ) | Developer | Footer, Forms, Styling |
 | Okolla Immaculate | [okolla-immaculate](https://github.com/okolla-immaculate) | Developer | Navigation, Routing |
 | philip Biven | [philipbiven-pixel](https://github.com/philipbiven-pixel) | Developer | Responsiveness |
-|    | Mrignatio7|
+| Ignatius John | [Mrignatio7](https://github.com/mrignatio7)  | Developer | posts |
 
 ## Contribution Breakdown
 
@@ -32,3 +32,7 @@
 ### Philip Biven
 - Create a login page
 - Added responsive design
+
+### Ignatius John
+- created post 
+- Responsiveness 
