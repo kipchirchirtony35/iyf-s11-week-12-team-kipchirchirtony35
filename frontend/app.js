@@ -142,7 +142,7 @@ if (signupForm) {
 
     alert("Account created successfully, " + name + "!");
 
-    window.location.href = "login.html";
+    window.location.href = "index.html";
   });
 }
 
