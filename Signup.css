@@ -1,90 +1,76 @@
-/* GENERAL */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
 body {
-  background: #f4f4f4;
-  padding: 15px;
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* HEADERS - GREY */
-h1 {
-  color: #6c757d !important; /* My Online Library */
-  font-size: 28px;
-  font-weight: bold;
-  margin: 15px 0 10px 0;
+.signup-container {
+  width: 100%;
+  max-width: 450px;
+  background: white;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-  color: #6c757d !important; /* Create Account */
-  font-size: 24px;
+.signup-container h1 {
+  text-align: center;
+  color: #1e3a8a;
+}
+
+.signup-container h2 {
+  text-align: center;
   margin-bottom: 5px;
 }
 
-/* SUBTITLE */
-p {
-  margin-bottom: 15px;
-  color: #333;
+.signup-container > p {
+  text-align: center;
+  color: #666;
 }
 
-/* SIGNUP BOX - BLUE */
 form {
-  background: #3498db; /* blue box */
-  padding: 20px;
-  border-radius: 12px;
-  max-width: 400px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-form label,
-form {
-  color: white;
-  font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  margin: 6px 0 12px 0;
-  border: none;
-  border-radius: 6px;
-  font-size: 14px;
-  display: block;
-}
-
-/* Force each field to new line - fixes your screenshot */
 label {
-  display: block;
+  font-weight: bold;
   margin-top: 10px;
-  color: white;
 }
 
-/* BUTTON */
-button {
-  width: 100%;
-  background: white;
-  color: #3498db;
-  border: none;
+input {
   padding: 12px;
+  border: 1px solid #ccc;
   border-radius: 6px;
-  font-weight: bold;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #1e3a8a;
+  color: white;
   font-size: 16px;
   cursor: pointer;
-  margin-top: 10px;
 }
 
 button:hover {
-  background: #e8e8e8;
+  background: #162d6b;
 }
 
-/* LOGIN LINK */
 a {
-  color: #3498db;
+  color: #1e3a8a;
   font-weight: bold;
-}
+                              }
