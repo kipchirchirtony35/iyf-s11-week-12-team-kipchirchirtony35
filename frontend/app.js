@@ -102,56 +102,6 @@ window.addEventListener("DOMContentLoaded", () => {
   setupSearch();
   fetchBooks("Fiction");
 });
-// ===== LOGIN =====
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    const loginForm = document.getElementById("loginForm");
-
-    if (!loginForm) {
-        return;
-    }
-
-    loginForm.addEventListener("submit", function (event) {
-
-        event.preventDefault();
-
-        const email = document.getElementById("email").value.trim();
-        const password = document.getElementById("password").value;
-
-        // Get saved user
-        const savedUser = localStorage.getItem("libraryUser");
-
-        if (!savedUser) {
-            alert("No account found. Please sign up first.");
-            return;
-        }
-
-        try {
-            const user = JSON.parse(savedUser);
-
-            if (email === user.email && password === user.password) {
-
-                alert("Login successful! Welcome, " + user.name + "!");
-
-                window.location.href = "index.html";
-
-            } else {
-
-                alert("Incorrect email or password.");
-
-            }
-
-        } catch (error) {
-
-            console.error("Login error:", error);
-            alert("There is a problem with the saved account. Please sign up again.");
-
-        }
-    });
-
-});
-
 // ===== SIGN UP =====
 
 const signupForm = document.getElementById("signupForm");
@@ -163,15 +113,14 @@ if (signupForm) {
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("signupEmail").value.trim();
     const password = document.getElementById("signupPassword").value;
-    const confirmPassword = document.getElementById("confirmPassword").value;
+    const confirmPassword =
+      document.getElementById("confirmPassword").value;
 
-    // Check if passwords match
     if (password !== confirmPassword) {
       alert("Passwords do not match.");
       return;
     }
 
-    // Check if this email is already registered
     const existingUser = localStorage.getItem("libraryUser");
 
     if (existingUser) {
@@ -183,19 +132,52 @@ if (signupForm) {
       }
     }
 
-    // Create user object
     const newUser = {
       name: name,
       email: email,
       password: password
     };
 
-    // Save user in browser
     localStorage.setItem("libraryUser", JSON.stringify(newUser));
 
     alert("Account created successfully, " + name + "!");
 
-    // Go to login page
     window.location.href = "login.html";
+  });
+}
+
+
+// ===== LOGIN =====
+
+const loginForm = document.getElementById("loginForm");
+
+if (loginForm) {
+  loginForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
+
+    const savedUser = localStorage.getItem("libraryUser");
+
+    if (!savedUser) {
+      alert("No account found. Please sign up first.");
+      return;
+    }
+
+    try {
+      const user = JSON.parse(savedUser);
+
+      if (email === user.email && password === user.password) {
+        alert("Login successful! Welcome, " + user.name + "!");
+        window.location.href = "index.html";
+      } else {
+        alert("Incorrect email or password.");
+      }
+
+    } catch (error) {
+      console.error("Login error:", error);
+      alert("There is a problem with the saved account. Please sign up again.");
+    }
   });
 }
