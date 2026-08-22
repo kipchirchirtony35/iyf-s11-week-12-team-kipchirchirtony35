@@ -104,36 +104,53 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 // ===== LOGIN =====
 
-const loginForm = document.getElementById("loginForm");
+document.addEventListener("DOMContentLoaded", () => {
 
-if (loginForm) {
-  loginForm.addEventListener("submit", function (event) {
-    event.preventDefault();
+    const loginForm = document.getElementById("loginForm");
 
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value;
-
-    // Get saved user
-    const savedUser = localStorage.getItem("libraryUser");
-
-    if (!savedUser) {
-      alert("No account found. Please sign up first.");
-      return;
+    if (!loginForm) {
+        return;
     }
 
-    const user = JSON.parse(savedUser);
+    loginForm.addEventListener("submit", function (event) {
 
-    // Check login details
-    if (email === user.email && password === user.password) {
-      alert("Login successful! Welcome, " + user.name + "!");
+        event.preventDefault();
 
-      window.location.href = "index.html";
-    } else {
-      alert("Incorrect email or password.");
-    }
-  });
-}
-// 
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value;
+
+        // Get saved user
+        const savedUser = localStorage.getItem("libraryUser");
+
+        if (!savedUser) {
+            alert("No account found. Please sign up first.");
+            return;
+        }
+
+        try {
+            const user = JSON.parse(savedUser);
+
+            if (email === user.email && password === user.password) {
+
+                alert("Login successful! Welcome, " + user.name + "!");
+
+                window.location.href = "index.html";
+
+            } else {
+
+                alert("Incorrect email or password.");
+
+            }
+
+        } catch (error) {
+
+            console.error("Login error:", error);
+            alert("There is a problem with the saved account. Please sign up again.");
+
+        }
+    });
+
+});
 
 // ===== SIGN UP =====
 
