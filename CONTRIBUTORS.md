@@ -5,7 +5,7 @@
 | Name | GitHub | Role | Contributions |
 |------|--------|------|---------------|
 | Kipchirchir Tony | [kipchirchirtony35](https://github.com/kipchirchirtony35) | Team Lead | Setup, Header component, API integration |
-| Gladwell Muthoni | [gladwellmuthoni ](https://github.com/gladwellmuthoni ) | Developer | Footer, Forms, Styling |
+| Gladwell Muthoni | [gladwellmuthoni ](https://github.com/gladwellmuthoni ) | Developer | Database section(seed.js),some parts of backend(routes)|
 | Okolla Immaculate | [okolla-immaculate](https://github.com/okolla-immaculate) | Developer | Navigation, Routing |
 | philip Biven | [philipbiven-pixel](https://github.com/philipbiven-pixel) | Developer | Responsiveness |
 | Ignatius John | [Mrignatio7](https://github.com/mrignatio7)  | Developer | posts |
@@ -19,10 +19,9 @@
 - Code review for all PRs
 
 ### Gladwell Muthoni
-- Built footer component
-- Styled all forms
-- Added responsive design
-- Wrote documentation
+- Backend(route setup)
+- Database architecture design
+- Converted all Express backend route handlers
 
 ### Okolla Immaculate
 - Created navigation menu
