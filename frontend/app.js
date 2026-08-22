@@ -142,7 +142,7 @@ if (signupForm) {
 
     alert("Account created successfully, " + name + "!");
 
-    window.location.href = "index.html";
+    window.location.href = "home.html";
   });
 }
 
@@ -171,7 +171,7 @@ if (loginForm) {
      if (email === user.email && password === user.password) {
   alert("Login successful! Welcome, " + user.name + "!");
 
-  window.location.href = "index.html";
+  window.location.href = "home.html";
      }  else {
         alert("Incorrect email or password.");
       }
