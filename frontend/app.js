@@ -146,7 +146,6 @@ if (signupForm) {
   });
 }
 
-
 // ===== LOGIN =====
 
 const loginForm = document.getElementById("loginForm");
@@ -169,7 +168,6 @@ if (loginForm) {
       const user = JSON.parse(savedUser);
 
       if (email === user.email && password === user.password) {
-
         alert("Login successful! Welcome, " + user.name + "!");
 
         localStorage.setItem("loggedIn", "true");
@@ -185,4 +183,4 @@ if (loginForm) {
       alert("There is a problem with the saved account. Please sign up again.");
     }
   });
-                              }
+      }
