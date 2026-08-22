@@ -171,7 +171,10 @@ if (loginForm) {
      if (email === user.email && password === user.password) {
   alert("Login successful! Welcome, " + user.name + "!");
 
+  localStorage.setItem("loggedIn", "true");
+
   window.location.href = "components/home.html";
+}
      }  else {
         alert("Incorrect email or password.");
       }
@@ -184,11 +187,5 @@ if (loginForm) {
 }
 const logoutBtn = document.getElementById("logoutBtn");
 
-if (logoutBtn) {
-  logoutBtn.addEventListener("click", function () {
-    localStorage.removeItem("loggedIn");
-    window.location.href = "login.html";
-  });
-}
 
 
