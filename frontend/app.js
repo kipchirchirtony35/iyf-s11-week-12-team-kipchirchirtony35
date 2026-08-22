@@ -183,14 +183,4 @@ if (loginForm) {
   });
 }
 
-const logoutButton = document.getElementById("logoutButton");
 
-if (logoutButton) {
-  logoutButton.addEventListener("click", function () {
-    localStorage.removeItem("libraryUser");
-
-    alert("You have been logged out.");
-
-    window.location.href = "Login.html";
-  });
-}
