@@ -168,14 +168,15 @@ if (loginForm) {
     try {
       const user = JSON.parse(savedUser);
 
-     if (email === user.email && password === user.password) {
-  alert("Login successful! Welcome, " + user.name + "!");
+      if (email === user.email && password === user.password) {
 
-  localStorage.setItem("loggedIn", "true");
+        alert("Login successful! Welcome, " + user.name + "!");
 
-  window.location.href = "components/home.html";
-}
-     }  else {
+        localStorage.setItem("loggedIn", "true");
+
+        window.location.href = "components/home.html";
+
+      } else {
         alert("Incorrect email or password.");
       }
 
@@ -184,8 +185,4 @@ if (loginForm) {
       alert("There is a problem with the saved account. Please sign up again.");
     }
   });
-}
-const logoutBtn = document.getElementById("logoutBtn");
-
-
-
+                              }
