@@ -123,3 +123,27 @@ if (loginForm) {
     }
   });
         }
+
+// ===== SIGN UP =====
+
+const signupForm = document.getElementById("signupForm");
+
+if (signupForm) {
+  signupForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("signupEmail").value;
+    const password = document.getElementById("signupPassword").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
+
+    if (password !== confirmPassword) {
+      alert("Passwords do not match.");
+      return;
+    }
+
+    alert("Account created successfully, " + name + "!");
+
+    window.location.href = "Login.html";
+  });
+}
